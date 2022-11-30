@@ -35,9 +35,10 @@ const DUMMY_PLACES = [
 ];
 
 router.get("/:pid", (req, res, next) => {
+
   const placeId = req.params.pid;
   const place = DUMMY_PLACES.find((place) => place.id === placeId);
-  res.json({ place });
+  res.json({place});
 });
 
 module.exports = router;
